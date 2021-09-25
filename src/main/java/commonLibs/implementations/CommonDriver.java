@@ -31,6 +31,22 @@ public class CommonDriver {
 	public void navigateToURL(String url) {
 		driver.manage().timeouts().pageLoadTimeout(pageLoadTimeout, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(elementDetectionTimeout, TimeUnit.SECONDS);
-		
+	}
+	public void closeAllBrowser() {
+		driver.quit();
+	}
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	public void setPageLoadTimeout(int pageLoadTimeout) {
+		this.pageLoadTimeout = pageLoadTimeout;
+	}
+
+	public void setElementDetectionTimeout(int elementDetectionTimeout) {
+		this.elementDetectionTimeout = elementDetectionTimeout;
+	}
+	public String getTitleOfPage() {
+		return driver.getTitle();
 	}
 }

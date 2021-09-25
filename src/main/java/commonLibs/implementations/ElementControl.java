@@ -18,21 +18,27 @@ public class ElementControl {
 	public void clear(WebElement element) {
 		element.clear();
 	}
+	
 	public void setText(WebElement element, String text) {
 		element.sendKeys(text);
 	}
+	
 	public boolean isEnabled(WebElement element) {
 		return element.isEnabled(); 
 	}
+	
 	public boolean isDisplayed(WebElement element) {
 		return element.isDisplayed();
 	}
+	
 	public void acceptAlert() {
 		driver.switchTo().alert().accept();
 	}
+	
 	public String getAlertText() {
 		return driver.switchTo().alert().getText();
 	}
+	
 	public void selectFromDropdown(WebElement element, String text) {
 		Select setDropSelect = new Select(element);
 		setDropSelect.selectByVisibleText(text);
