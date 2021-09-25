@@ -76,6 +76,5 @@ public class BaseTests {
 	@AfterSuite
 	public void postTearDown() {
 		reportUtils.flushReport();
-	}
-	
+	}	
 }
